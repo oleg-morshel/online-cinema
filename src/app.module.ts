@@ -6,9 +6,10 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule } from '@nestjs/config';
+import { GenreModule } from './genre/genre.module';
 
 @Module({
-	imports: [ConfigModule.forRoot(), UserModule, AuthModule, JwtModule],
+	imports: [ConfigModule.forRoot(), UserModule, GenreModule, AuthModule, JwtModule],
 	controllers: [AppController],
 	providers: [AppService, PrismaService],
 })
