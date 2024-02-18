@@ -14,6 +14,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
 			inject: [ConfigService],
 			useFactory: getJwtConfig,
 		}),
+		ConfigModule,
 	],
 	controllers: [AuthController],
 	providers: [AuthService, ConfigService, PrismaService, JwtStrategy],
